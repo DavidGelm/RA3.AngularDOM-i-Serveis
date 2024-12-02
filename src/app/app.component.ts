@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -14,5 +14,8 @@ export class AppComponent implements OnInit {
   ngOnInit(){
     const element = document.getElementById('text');
     element!.innerText = element!.innerText.toUpperCase();
+
+    const Url = document.getElementById('url');
+    Url!.innerText = document.URL
   }
 }
