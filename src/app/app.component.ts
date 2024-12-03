@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
-
+// @ts-ignore
+import { yellowSubmarine } from './funcions.js';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],
@@ -11,11 +12,16 @@ import {RouterOutlet} from '@angular/router';
 export class AppComponent implements OnInit {
   title = 'ExercicisAngularDomiServeisDavidGelmaDam1';
   constructor(){}
+
   ngOnInit(){
     const element = document.getElementById('text');
     element!.innerText = element!.innerText.toUpperCase();
 
     const Url = document.getElementById('url');
-    Url!.innerText = document.URL
+    Url!.innerText = document.URL;
+
+    yellowSubmarine("text");
+
   }
+
 }
