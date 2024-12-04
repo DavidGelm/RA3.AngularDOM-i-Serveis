@@ -22,9 +22,11 @@ export class AppComponent implements OnInit {
 
     const contar = countWords('lorem');
 
-
     const Comptador = document.getElementById('comptador');
     Comptador!.innerText = `El paragraf conte ${contar} paraules.`;
+
+    const imatge = document.getElementById('imatge');
+    imatge!.innerHTML = '<img src="https://cw.gunow.co/wp-content/uploads/2024/07/Captura-de-pantalla-2024-07-17-161315.png">';
 
     yellowSubmarine("text");
     changeSize('50px','100px','taula');
