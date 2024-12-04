@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 // @ts-ignore
-import { yellowSubmarine } from './funcions.js';
+import {yellowSubmarine,changeSize} from './funcions.js';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],
@@ -21,7 +21,6 @@ export class AppComponent implements OnInit {
     Url!.innerText = document.URL;
 
     yellowSubmarine("text");
-
+    changeSize('50px','100px','taula');
   }
-
 }
