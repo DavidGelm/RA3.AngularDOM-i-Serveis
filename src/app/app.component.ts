@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 // @ts-ignore
-import {yellowSubmarine,changeSize} from './funcions.js';
+import {yellowSubmarine,changeSize,countWords} from './funcions.js';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],
@@ -19,6 +19,12 @@ export class AppComponent implements OnInit {
 
     const Url = document.getElementById('url');
     Url!.innerText = document.URL;
+
+    const contar = countWords('lorem');
+
+
+    const Comptador = document.getElementById('comptador');
+    Comptador!.innerText = `El paragraf conte ${contar} paraules.`;
 
     yellowSubmarine("text");
     changeSize('50px','100px','taula');

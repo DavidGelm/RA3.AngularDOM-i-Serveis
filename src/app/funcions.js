@@ -16,3 +16,8 @@ export function changeSize(height,width,taulaId){
     }
   }
 }
+
+export function countWords(lorem){
+  const paragraphElement = document.getElementById(lorem);
+  return paragraphElement ? paragraphElement.innerText.trim().split(/\s+/).length : 0;
+}
