@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 // @ts-ignore
-import {yellowSubmarine,changeSize,countWords} from './funcions.js';
+import {yellowSubmarine,changeSize,countWords,mostrarllista} from './funcions.js';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],
@@ -30,5 +30,8 @@ export class AppComponent implements OnInit {
 
     yellowSubmarine("text");
     changeSize('50px','100px','taula');
+
+    console.log(mostrarllista("select","resultatcontllista"))
+
   }
 }

@@ -21,3 +21,40 @@ export function countWords(lorem){
   const paragraphElement = document.getElementById(lorem);
   return paragraphElement ? paragraphElement.innerText.trim().split(/\s+/).length : 0;
 }
+
+export function mostrarllista(text,mostrar){
+  var llistacont = document.getElementById(text)
+
+  var resultat = ""
+  var nOpcio = 1
+  var primer = true
+  var cont = false
+  for (var i = 0; i < llistacont.innerHTML.length; i++) {
+    if (llistacont.innerHTML.charAt(i) === '>' || llistacont.innerHTML.charAt(i) === '<') {
+      if (cont !== 3) {
+        cont++
+      }
+      else{
+        cont = 0
+        resultat += "   "
+        primer = true
+      }
+    }
+    else if (cont === 2) {
+      if (primer === true) {
+        resultat += " opcio "+nOpcio+":  "
+        nOpcio++
+        primer = false
+        resultat += llistacont.innerHTML.charAt(i)
+      }
+      else {
+        resultat += llistacont.innerHTML.charAt(i)
+      }
+    }
+
+  }
+
+  document.getElementById(mostrar).innerHTML = resultat;
+
+
+}
