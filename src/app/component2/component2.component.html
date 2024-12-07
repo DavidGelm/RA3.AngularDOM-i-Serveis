@@ -1,1 +1,7 @@
-<div>{{text}}</div>
+<div *ngIf="llibre">
+  <h2>{{ llibre?.titol }}</h2>
+  <ul>
+    <li *ngFor="let tematica of llibre?.tematiques">{{ tematica }}</li>
+  </ul>
+</div>
+

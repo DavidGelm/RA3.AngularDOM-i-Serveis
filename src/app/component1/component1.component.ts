@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// @ts-ignore
 import { TextDivService } from '../text-div.service';
+import { Llibre } from '../llibre';
 
 @Component({
   selector: 'app-component1',
@@ -15,10 +15,10 @@ export class Component1Component implements OnInit {
 
   ngOnInit(): void {}
 
-  guardarText() {
-    const textElement = document.getElementById('textDiv');
-    const text = textElement!.innerText;
-    console.log('Text guardat', text);
-    this.textService.setText(text);
+  guardarLlibre(): void {
+    const titol = 'El meu primer llibre';
+    const tematiques = ['Ficció', 'Aventura'];
+    const llibre = new Llibre(titol, tematiques);
+    this.textService.setLlibre(llibre);
   }
 }

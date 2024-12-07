@@ -1,19 +1,20 @@
 import { Injectable } from '@angular/core';
+import { Llibre } from './llibre';
+
 @Injectable({
   providedIn: 'root'
 })
 export class TextDivService {
-  private text = '';
+  private llibre: Llibre | null = null;
 
   constructor() { }
 
-  setText(newText: string): void {
-    this.text = newText;
-    console.log('Text mostrat segon div:', this.text);
-
+  setLlibre(newLlibre: Llibre): void {
+    this.llibre = newLlibre;
+    console.log('Llibre guardat:', this.llibre);
   }
 
-  getText() {
-    return this.text;
+  getLlibre(): Llibre | null {
+    return this.llibre;
   }
 }

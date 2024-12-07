@@ -1,12 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
+import { CommonModule } from '@angular/common';
 // @ts-ignore
 import {yellowSubmarine,changeSize,countWords,mostrarllista} from './funcions.js';
 import { Component1Component } from './component1/component1.component';
 import { Component2Component } from './component2/component2.component';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Component1Component,Component2Component],
+  imports: [RouterOutlet,Component1Component,Component2Component,CommonModule],
   templateUrl: './app.component.html',
   standalone: true,
   styleUrls: ['./app.component.css']
