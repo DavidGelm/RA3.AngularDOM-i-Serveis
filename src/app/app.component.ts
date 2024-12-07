@@ -2,12 +2,14 @@ import {Component, OnInit} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 // @ts-ignore
 import {yellowSubmarine,changeSize,countWords,mostrarllista} from './funcions.js';
+import { Component1Component } from './component1/component1.component';
+import { Component2Component } from './component2/component2.component';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,Component1Component,Component2Component],
   templateUrl: './app.component.html',
   standalone: true,
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
   title = 'ExercicisAngularDomiServeisDavidGelmaDam1';
